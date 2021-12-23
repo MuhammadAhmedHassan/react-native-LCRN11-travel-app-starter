@@ -11,15 +11,15 @@ import {
 } from "react-native";
 
 import { dummyData, COLORS, SIZES, FONTS, icons, images } from "../constants";
+import { Header, CountriesAndPlacesSection } from "../components/Dashboard";
 
 const Dashboard = ({ navigation }) => {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Dashboard</Text>
-      <TouchableOpacity onPress={() => navigation.navigate("Place")}>
-        <Text>Navigate to Place</Text>
-      </TouchableOpacity>
-    </View>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.black }}>
+      <Header />
+
+      <CountriesAndPlacesSection />
+    </SafeAreaView>
   );
 };
 
